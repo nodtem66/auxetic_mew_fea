@@ -1,0 +1,5 @@
+{
+"name": "hcell_4",
+"thickness_um": [127.25, 129.41, 118.62, 116.47, 112.7, 115.4],
+"biotester_csv": "hcell_004Data.csv",
+}

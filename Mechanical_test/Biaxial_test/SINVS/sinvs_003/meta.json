@@ -1,0 +1,5 @@
+{
+"name": "sinv_3",
+"thickness_um": [124.59, 119.43, 122.77, 124.08, 124.23],
+"biotester_csv": "sinvs_003Data.csv",
+}

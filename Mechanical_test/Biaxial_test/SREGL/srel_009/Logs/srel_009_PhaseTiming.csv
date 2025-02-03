@@ -1,0 +1,3 @@
+Set,SetName,Cycle,Phase,StartTime(s),DataTime(s)
+1,Until breaking,1,Stretch,0,0
+0,Unknown,0,End,420.27,420.27

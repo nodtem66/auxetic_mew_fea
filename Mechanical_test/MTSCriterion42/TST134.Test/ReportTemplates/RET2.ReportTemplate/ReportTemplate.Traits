@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReportTemplate version="4.7">
+  <_TraitsFileList_ type="String">
+    <String>ReportTemplate.Traits</String>
+  </_TraitsFileList_>
+  <Name>RET2</Name>
+  <TemplateFileName>Default Test Run Report.xltx</TemplateFileName>
+  <RelativePathType>ReportTemplateBasePath</RelativePathType>
+  <ReportType>Specimen</ReportType>
+  <ReportFormat>NormalWorkbook</ReportFormat>
+  <IsDefault>True</IsDefault>
+  <ReportRecordingMode>New</ReportRecordingMode>
+  <Selector>ReportTemplates</Selector>
+  <UniqueId>{6e578177-f83b-423e-83d2-37c65d9ed685}</UniqueId>
+  <ReportLocation>
+    <MtsStringParameter version="4.7">
+      <Value></Value>
+      <Selector>ReportLocation</Selector>
+      <UniqueId>{e216b029-7eb6-4be8-93d5-f54c4217ede2}</UniqueId>
+    </MtsStringParameter>
+  </ReportLocation>
+</ReportTemplate>

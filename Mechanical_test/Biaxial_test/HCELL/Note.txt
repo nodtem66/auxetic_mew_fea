@@ -1,0 +1,20 @@
+Biaxial test of HCELL design (A=0.15mm B=0.25mm alpha=1 layers=10)
+Printing speed 150mm/min
+Size: 12mm x 12mm
+
+Thickness (um)
+----
+hcell_001: 113.79 117.60 114.97 102.05 124.57 (238.87 232.04 238.87 235.73 229.16)
+hcell_002: 121.32 119.70 125.11 122.54 123.26 (209.04 221.65 198.46 202.22 213.18)
+hcell_003: 112.71 115.93 114.31 115.70 114.85 237.27 (239.37 243.72 238.35 209.75)
+hcell_004: 127.25 129.41 118.62 116.47 112.7 115.4 234.56 (232.43 241.57 239.94 244.83 239.13)
+* numbers in brackets are thick layers in some area. See the thickness images in Keyence/H_CELL/ for more detail.
+
+Load cell: 2.5N
+Machine: Biotester5000
+Sampling rate: 1Hz
+Image recording: 1Hz
+
+Initial length: 5000um in both direction
+Related files:
+- Keyence/H_CELL/

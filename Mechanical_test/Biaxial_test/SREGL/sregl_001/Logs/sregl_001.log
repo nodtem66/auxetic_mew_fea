@@ -1,0 +1,30 @@
+New Log File 
+BioTester5000 Controller
+	Detected on COM8
+DMKCamera startLive (-1)
+Serial port \\.\COM8
+	successfully reconfigured.
+
+CellScale Biomat. Testing
+BioTester 5000 Master Ctl
+SW# 75075 Rev 1.9
+Copyright 2013
+Software Version 10.77
+
+Initializing X LoadCell
+	2.5N, Ser.No. 1557669
+Initializing Y LoadCell
+	2.5N, Ser.No. 1560860
+Initializing Actuators
+Initializing DMKCamera
+System Ready!
+Mon Mar 04 11:31:49 2024
+
+
+ERROR - Actuator Reached Range Limit
+Range Limits can be changed by selecting
+  Range Limits from the Settings menu
+Exiting Test...
+
+Sampling Finished
+FINISHED TEST

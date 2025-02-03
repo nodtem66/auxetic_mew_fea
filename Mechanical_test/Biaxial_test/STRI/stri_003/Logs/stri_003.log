@@ -1,0 +1,35 @@
+New Log File 
+BioTester5000 Controller
+	Detected on COM8
+DMKCamera startLive (-2)
+Serial port \\.\COM8
+	successfully reconfigured.
+
+CellScale Biomat. Testing
+BioTester 5000 Master Ctl
+SW# 75075 Rev 1.9
+Copyright 2013
+Software Version 10.77
+
+Initializing X LoadCell
+	2.5N, Ser.No. 1557669
+Initializing Y LoadCell
+	2.5N, Ser.No. 1560860
+Initializing Actuators
+Initializing DMKCamera
+System Ready!
+Mon Mar 11 11:38:30 2024
+
+FINISHED TEST
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.

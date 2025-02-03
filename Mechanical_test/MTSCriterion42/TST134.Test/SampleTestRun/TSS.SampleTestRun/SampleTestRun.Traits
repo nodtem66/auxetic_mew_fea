@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SampleTestRun version="4.7">
+  <_TraitsFileList_ type="String">
+    <String>SampleTestRun.Traits</String>
+    <String>SampleTestRun.1.Traits</String>
+  </_TraitsFileList_>
+  <Name>TSS</Name>
+  <LoggingType>Basic</LoggingType>
+  <State>Completed</State>
+  <Date>12/15/2023 15:12:54</Date>
+  <PlatformVersionCreated>4.7.1.449</PlatformVersionCreated>
+  <PlatformVersionLastModified>4.7.1.449</PlatformVersionLastModified>
+  <Selector>SampleTestRun</Selector>
+  <UniqueId>{cdb301bc-a1c5-41f3-b163-5a8db5a4936b}</UniqueId>
+  <DisplayName>
+    <LocalizedString version="4.7">
+      <Selector>DisplayName</Selector>
+      <UniqueId>{d6fcb43c-79e0-4405-9f01-8e6d8622e617}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>Sample</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </DisplayName>
+</SampleTestRun>

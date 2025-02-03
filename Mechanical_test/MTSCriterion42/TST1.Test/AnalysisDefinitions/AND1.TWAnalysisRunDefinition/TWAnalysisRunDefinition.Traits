@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TWAnalysisRunDefinition version="4.7">
+  <_TraitsFileList_ type="String">
+    <String>TWAnalysisRunDefinition.Traits</String>
+  </_TraitsFileList_>
+  <Name>AND1</Name>
+  <Selector>AnalysisDefinitions</Selector>
+  <UniqueId>{8f6adb8c-f91a-489f-a1ed-e2878574aaed}</UniqueId>
+  <AnalysisLayout>
+    <AnalysisLayout version="4.7">
+      <SerializedAnalysisViews isNull="true" />
+      <Name></Name>
+      <Selector>AnalysisLayout</Selector>
+      <UniqueId>{ffbf4814-a146-4886-9a55-cff2a9409c03}</UniqueId>
+      <ViewLayoutStates />
+    </AnalysisLayout>
+  </AnalysisLayout>
+  <DisplayName>
+    <LocalizedString version="4.7">
+      <Selector>DisplayName</Selector>
+      <UniqueId>{75d03417-f6ca-4199-ba99-b7e7c082c887}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>Review</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </DisplayName>
+  <DaqInformation>
+    <NonBoundaryDaqInformation version="4.7">
+      <DisplayName>DAQ: Crosshead, … - (Timed)</DisplayName>
+      <ArrayDisposition>Retain</ArrayDisposition>
+      <Name>DaqTaskActivity1</Name>
+      <Selector>DaqInformation</Selector>
+      <UniqueId>{1eb8a45a-61fc-4011-8f45-4dcb9645b695}</UniqueId>
+      <SignalInfo>
+        <SignalDimensionUnitName version="4.7">
+          <DimensionName>length</DimensionName>
+          <UnitName>m</UnitName>
+          <InternalName>_Extension</InternalName>
+          <SignalID>Crosshead</SignalID>
+          <Selector>SignalInfo</Selector>
+          <UniqueId>{b67bbe37-3c63-4ea3-8ff3-5dbe4415500f}</UniqueId>
+        </SignalDimensionUnitName>
+        <SignalDimensionUnitName version="4.7">
+          <DimensionName>force</DimensionName>
+          <UnitName>N</UnitName>
+          <InternalName>_Load</InternalName>
+          <SignalID>Load</SignalID>
+          <Selector>SignalInfo</Selector>
+          <UniqueId>{ac39d385-491d-48e6-b230-3e15eb161440}</UniqueId>
+        </SignalDimensionUnitName>
+        <SignalDimensionUnitName version="4.7">
+          <DimensionName>time</DimensionName>
+          <UnitName>sec</UnitName>
+          <InternalName>_Time</InternalName>
+          <SignalID>Time</SignalID>
+          <Selector>SignalInfo</Selector>
+          <UniqueId>{2d3dcbdd-4a38-43ea-9bf3-fbd74189cd04}</UniqueId>
+        </SignalDimensionUnitName>
+      </SignalInfo>
+      <SignalMappings>
+        <SignalFunctionHolder version="4.7">
+          <VariableIdentifier>_ExtensionArray</VariableIdentifier>
+          <SignalFunction>Array</SignalFunction>
+          <SignalName>_Extension</SignalName>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>SignalMappings</Selector>
+          <UniqueId>{dadc73fd-2a86-45ad-9e71-de4416e337ad}</UniqueId>
+        </SignalFunctionHolder>
+        <SignalFunctionHolder version="4.7">
+          <VariableIdentifier>_LoadArray</VariableIdentifier>
+          <SignalFunction>Array</SignalFunction>
+          <SignalName>_Load</SignalName>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>SignalMappings</Selector>
+          <UniqueId>{2e8379ce-07ed-4fe9-be23-ebfb6f6def84}</UniqueId>
+        </SignalFunctionHolder>
+        <SignalFunctionHolder version="4.7">
+          <VariableIdentifier>_TimeArray</VariableIdentifier>
+          <SignalFunction>Array</SignalFunction>
+          <SignalName>_Time</SignalName>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>SignalMappings</Selector>
+          <UniqueId>{51836f24-cf4e-41a8-b297-68f52af754d2}</UniqueId>
+        </SignalFunctionHolder>
+      </SignalMappings>
+      <Triggers>
+        <TriggerAttributes version="4.7">
+          <DaqType>DaqTimed</DaqType>
+          <Selector>Triggers</Selector>
+          <UniqueId>{ffa83077-5019-4fd7-b736-e04b965b9ede}</UniqueId>
+          <Attributes>
+            <StringWrapper version="4.7">
+              <String>trigger-0</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>triggerid</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{80e6059f-f2c3-47d8-a715-fdbbae2a1624}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>DaqTimed</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>DaqType</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{9535e026-b959-47fe-9fa4-8c305b496a1e}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>10</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>Frequency</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{6a793aa0-83f0-4a57-bdf7-0c98f9f6c681}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>1 count</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>BufferSize</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{0a5ba191-426b-46d3-a743-f578f48d39e6}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>0</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>TotalSamples</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{731d5b7e-3869-4123-9ae0-36e408159ce9}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>0</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>Interval</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{3b5bef9f-e552-4b97-abe5-8ce45e5d19a9}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>ContinuousSampling</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>DataSamplingType</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{129c857d-9741-4ad4-884d-6de98c51ecd6}</UniqueId>
+            </StringWrapper>
+            <StringWrapper version="4.7">
+              <String>SampleRate</String>
+              <IsAnalysisDef>False</IsAnalysisDef>
+              <Name>DataRateOrIntervalType</Name>
+              <Selector>Attributes</Selector>
+              <UniqueId>{39f61f9c-eaeb-4347-9dd5-a8e779e594aa}</UniqueId>
+            </StringWrapper>
+          </Attributes>
+        </TriggerAttributes>
+      </Triggers>
+      <PersistedAdditionalCalculations>
+        <StringWrapper version="4.7">
+          <String>PrimaryExtArray</String>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>PersistedAdditionalCalculations</Selector>
+          <UniqueId>{93fd2d88-bb60-40c3-9536-7099f859efc7}</UniqueId>
+        </StringWrapper>
+        <StringWrapper version="4.7">
+          <String>SlackExtArray</String>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>PersistedAdditionalCalculations</Selector>
+          <UniqueId>{11bb4157-0806-4502-bd11-408ea97b5388}</UniqueId>
+        </StringWrapper>
+        <StringWrapper version="4.7">
+          <String>PrimaryStrainArray</String>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>PersistedAdditionalCalculations</Selector>
+          <UniqueId>{ad8a0212-e667-42e1-8c91-4d8b4a5534d5}</UniqueId>
+        </StringWrapper>
+        <StringWrapper version="4.7">
+          <String>StrainArray</String>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>PersistedAdditionalCalculations</Selector>
+          <UniqueId>{a18c7656-0291-4a9b-a31c-8101a6a47bef}</UniqueId>
+        </StringWrapper>
+        <StringWrapper version="4.7">
+          <String>StressArray</String>
+          <IsAnalysisDef>False</IsAnalysisDef>
+          <Selector>PersistedAdditionalCalculations</Selector>
+          <UniqueId>{9f9cf209-0d1b-4ce0-99cc-3ab59d4b55c6}</UniqueId>
+        </StringWrapper>
+      </PersistedAdditionalCalculations>
+    </NonBoundaryDaqInformation>
+  </DaqInformation>
+</TWAnalysisRunDefinition>

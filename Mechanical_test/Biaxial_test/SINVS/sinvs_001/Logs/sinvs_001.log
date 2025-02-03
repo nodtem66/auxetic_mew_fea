@@ -1,0 +1,39 @@
+New Log File 
+BioTester5000 Controller
+	Detected on COM8
+ERROR: DMKCamera startLive Failed
+CreateFile failed with error 5.
+Initializing Actuators
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+Error Initializing Embedded ControllerMon Feb 26 15:07:52 2024
+
+Sampling Finished
+FINISHED TEST
+
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+Initializing DMKCamera
+System Ready!
+ClearBuffers failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+ReadFile failed with error 6.
+FINISHED TEST

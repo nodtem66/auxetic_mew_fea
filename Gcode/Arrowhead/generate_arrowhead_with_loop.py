@@ -1,0 +1,201 @@
+'''
+Generate arrow head structure
+'''
+import math
+from os.path import basename
+
+#***** Design parameters from Images ****
+A = 0.200*5 # [mm]
+B = 0.100*5 # [mm]
+alpha = 45 # degree
+X_repetitions = 8 #number of unit cells in x-direction
+Y_repetitions = 8 #number of unit cells in y-direction
+#***** Printing parameters ******
+#diameter=3 # Diameter of tube mm 
+CTS = 135 #mm/min
+layers=10 # CHANGE
+handle_loops_per_side = 0 # [-] default = 6
+handle_height = 6 # [mm]
+initial_length_x = 4 # [mm]
+initial_length_y = 4 # [mm]
+handle_printing_speed = CTS - 10 # [mm/min]
+
+#Adjusting the printing speed X for every layer increased
+speed_step_for_one_layer = 0 # [mm/min]
+#Adjust height for every layer increased
+height_step_for_one_layer = 0.01 # [mm]
+
+# checking the validity of parameters
+tan = lambda deg : math.tan(math.radians(deg))
+sin = lambda deg : math.sin(math.radians(deg))
+cos = lambda deg : math.cos(math.radians(deg))
+dAy = A*cos(alpha/2) 
+dAx = A*sin(alpha/2)
+
+assert alpha > 0 and alpha < 90, f'0 < alpha = {alpha} < 90'
+assert X_repetitions > 0 and Y_repetitions > 0
+assert B**2 - dAx**2 > 0
+
+dBx = dAx
+dBy = math.sqrt(B**2 - dAx**2)
+total_x = 2*X_repetitions*dAx
+total_y = Y_repetitions * (dAy-dBy) + dBy
+
+if handle_loops_per_side > 0:
+  assert initial_length_x < total_x
+  assert initial_length_y < total_y
+
+  handle_overlap_x = (total_x - initial_length_x)/2
+  handle_overlap_y = (total_y - initial_length_y)/2
+  handle_move_xstep = total_x/(handle_loops_per_side - 1)
+  handle_move_ystep = total_y/(handle_loops_per_side - 1)
+  handle_width = 0.5 * dAx
+
+from datetime import datetime
+today = datetime.now()
+today_str = today.strftime('%Y%m%d-%H%M%S')
+filename = f'arrowhead_{X_repetitions}-{Y_repetitions}_nL{layers}_cts{CTS}_{today_str}.gcode'
+
+print(f'dAy/dAx: {dAy}/{dAx}')
+print(f'dBy/dBx: {dBy}/{dBx}\n')
+print(f'total length: X={total_x} Y={total_y}\n')
+
+if handle_loops_per_side > 0:
+  print(f'initial length: X={initial_length_x} Y={initial_length_y}')
+  print(f'Handle overlap: X={handle_overlap_x} Y={handle_overlap_y}')
+  print(f'Handle width: {handle_width}')
+  print(f'Handle height: {handle_height}\n')
+
+print(f'Generating script for: {CTS} mm/min')
+print(f'Filename: {filename}')
+
+def border(f, wx, hy, speed=CTS):
+  f.write('; Border\n')
+  f.write(f'G0 X{wx} F{speed}\n')
+  f.write(f'G0 Y{hy} F{speed}\n')
+  f.write(f'G0 X{-wx} F{speed}\n')
+  f.write(f'G0 Y{-hy} F{speed}\n\n')
+
+def stabilization_lines(f, wx, ystep=0.3, speed=CTS, n=5):
+  f.write('; Stabilization line\n')
+  for i in range(n):
+    f.write(f'G0 X{wx} F{speed}\n')
+    f.write(f'G0 Y{ystep} F{speed}\n')
+    f.write(f'G0 X{-wx} F{speed}\n')
+    f.write(f'G0 Y{ystep} F{speed}\n\n')
+  f.write(f'G0 Y{2*ystep} F{speed}\n\n')
+
+def print_handle(f):
+  # Print handle for biaxial test
+    f.write('; Print handle\n')
+    last_h = handle_loops_per_side - 1
+    f.write(f'G0 X{dAx} Y{handle_overlap_y}\n')
+    for h in range(handle_loops_per_side):
+      f.write(f'G0 X{handle_width} F{speed}\n')
+      f.write(f'G0 Y{-handle_height} F{speed}\n')
+      f.write(f'G0 X{-handle_width*2} F{speed}\n')
+      f.write(f'G0 Y{handle_height} F{speed}\n')
+      f.write(f'G0 X{handle_width} F{speed}\n')
+      if h < last_h:
+        f.write(f'G2 X{-handle_move_xstep} I{-handle_move_xstep/2} J{-handle_move_xstep/2} F{speed}\n')
+    
+    f.write(f'G0 X{handle_overlap_x} Y{-handle_overlap_y}\n')
+    for h in range(handle_loops_per_side):
+      f.write(f'G0 Y{-handle_width} F{speed}\n')
+      f.write(f'G0 X{-handle_height} F{speed}\n')
+      f.write(f'G0 Y{handle_width*2} F{speed}\n')
+      f.write(f'G0 X{handle_height} F{speed}\n')
+      f.write(f'G0 Y{-handle_width} F{speed}\n')
+      if h < last_h:
+        f.write(f'G2 Y{handle_move_ystep} I{-handle_move_ystep/2} J{handle_move_ystep/2} F{speed}\n')
+
+    f.write(f'G0 X{-handle_overlap_x} Y{-handle_overlap_y}\n')
+    for h in range(handle_loops_per_side):
+      f.write(f'G0 X{-handle_width} F{speed}\n')
+      f.write(f'G0 Y{handle_height} F{speed}\n')
+      f.write(f'G0 X{handle_width*2} F{speed}\n')
+      f.write(f'G0 Y{-handle_height} F{speed}\n')
+      f.write(f'G0 X{-handle_width} F{speed}\n')
+      if h < last_h:
+        f.write(f'G2 X{handle_move_xstep} I{handle_move_xstep/2} J{handle_move_xstep/2} F{speed}\n')
+
+    f.write(f'G0 X{-handle_overlap_x} Y{handle_overlap_y}\n')
+    for h in range(handle_loops_per_side):
+      f.write(f'G0 Y{handle_width} F{speed}\n')
+      f.write(f'G0 X{handle_height} F{speed}\n')
+      f.write(f'G0 Y{-handle_width*2} F{speed}\n')
+      f.write(f'G0 X{-handle_height} F{speed}\n')
+      f.write(f'G0 Y{handle_width} F{speed}\n')
+      if h < last_h:
+        f.write(f'G2 Y{-handle_move_ystep} I{handle_move_ystep/2} J{-handle_move_ystep/2} F{speed}\n')
+    f.write(f'G0 X-{total_x - handle_overlap_x - dAx} F{speed}')
+
+with open(filename, 'w') as f:
+  f.write(f'; Auxetic arrowhead\n')
+  f.write(f'; Generated by {basename(__file__)}\n')
+  f.write(f'; CTS: {CTS}\n')
+  f.write(f'; A: {A}\n')
+  f.write(f'; B: {B}\n')
+  f.write(f'; alpha: {alpha}\n')
+  f.write(f'; Y_repetitions: {Y_repetitions}\n')
+  f.write(f'; X_repetitions: {X_repetitions}\n')
+  f.write(f'; layers: {layers}\n')
+  f.write(f'; dAy/dAx: {dAy}/{dAx}\n')
+  f.write(f'; dBy/dBx: {dBy}/{dBx}\n')
+  f.write(f'; total length: X={total_x} Y={total_y}\n')
+  if handle_loops_per_side > 0:
+    f.write(f'; initial length: X={initial_length_x} Y={initial_length_y}\n')
+    f.write(f'; Handle overlap: X={handle_overlap_x} Y={handle_overlap_y}\n')
+    f.write(f'; Handle width: {handle_width}\n')
+    f.write(f'; Handle height: {handle_height}\n\n')
+  
+  f.write(f'; start gcode\n')
+  f.write(f'; Relative positioning\n')
+  f.write(f'G91\n; start at bottom-left corner\nG0 X0 Y0\n\n')
+
+  stabilization_lines(f, total_x)
+
+  #border(f, total_x, total_y)
+
+  #printing the construct
+  n = layers
+  speed = CTS
+
+  f.write(f'G0 X{dAx} F{speed}\n')
+
+  # Print n layers
+  # Foreach layer l from 0 to n-1
+  for l in range(n):
+    f.write(f"\n; START layer {l+1}/{n}\n")
+    last_i = X_repetitions - 1
+    # Print half arrowhead vertically from bottom-left to top-right
+    for i in range(X_repetitions):
+      for j in range(Y_repetitions):
+        f.write(f'G1 X{-dAx} Y{dAy} F{speed}\n')
+        f.write(f'G1 X{dBx} Y{-dBy} F{speed}\n')
+      for j in range(Y_repetitions):
+        f.write(f'G1 X{dBx} Y{dBy} F{speed}\n')
+        f.write(f'G1 X{-dAx} Y{-dAy} F{speed}\n')
+      if i < last_i:
+        f.write(f'G1 X{dBx} Y{dBy} F{speed}\n')
+        f.write(f'G1 X{dBx} Y{-dBy} F{speed}\n')
+
+    if handle_loops_per_side > 0:
+      print_handle(f)
+    else:
+      f.write(f'G0 X{-(2*(X_repetitions-1))*dAx}\n')
+    
+    speed += speed_step_for_one_layer
+    if height_step_for_one_layer > 0:
+      f.write(f'G0 Z{height_step_for_one_layer}\n')
+    f.write(f"\n; END layer {l+1}/{n}\n\n\n")
+
+  f.write('; move to top-left corner\n')
+  f.write(f'G0 X{-dAx} F{CTS}\n')
+  f.write(f'G0 Y{total_y} F{CTS}\n')
+  # move to parking position
+  if handle_loops_per_side > 0:
+    f.write(f'G0 Y{handle_height}\n')
+  f.write(f'G0 Y3 F{CTS}\n')
+  f.write(f'G90\n\n')
+  f.write(f'; end gcode\n')

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Test version="4.7">
+  <_TraitsFileList_ type="String">
+    <String>Test.Traits</String>
+    <String>Test.1.Traits</String>
+  </_TraitsFileList_>
+  <Name>TST134</Name>
+  <NextTestRunNumber>16</NextTestRunNumber>
+  <TestType>TestInstance</TestType>
+  <ApplicationGroup>TW</ApplicationGroup>
+  <CreatedApplication>TW Elite</CreatedApplication>
+  <VersionNumber>1.1.0</VersionNumber>
+  <PlatformVersionCreated>4.0.0.491</PlatformVersionCreated>
+  <PlatformVersionLastModified>4.7.1.449</PlatformVersionLastModified>
+  <InternalLic>Template.EM-Tension-Simplified</InternalLic>
+  <Domain>Generic</Domain>
+  <RemoteStartEnabled>False</RemoteStartEnabled>
+  <SwitchToReviewPageAfterTest>True</SwitchToReviewPageAfterTest>
+  <FormulaAssistantFile>Electro-Mechanical Tension Assistant</FormulaAssistantFile>
+  <LoggingType>Basic</LoggingType>
+  <Owner>MTS Systems Corporation</Owner>
+  <DateCreated>12/15/2023 14:43:07</DateCreated>
+  <DateLastModified>12/15/2023 17:49:24</DateLastModified>
+  <DefaultSpecimenName isNull="true" />
+  <UniqueId>{924dcb5b-9ced-4dee-9f80-fe6af963e145}</UniqueId>
+  <SampleTestRun />
+  <DomainID>
+    <DomainID version="4.7">
+      <ID>Generic</ID>
+      <Selector>DomainID</Selector>
+      <UniqueId>{5f03533b-f5ff-44ff-aa61-26cc517487ef}</UniqueId>
+    </DomainID>
+  </DomainID>
+  <Description>
+    <LocalizedString version="4.7">
+      <Selector>Description</Selector>
+      <UniqueId>{dd8852fe-8380-4447-87ca-d6ed3a782870}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>This template is designed for tensile testing.</Value>
+        </Entry>
+        <Entry>
+          <Key>cs</Key>
+          <Value>Tato šablona je navržena pro tahové zkoušky s použitím příčníku jako zdroje prodloužení.</Value>
+        </Entry>
+        <Entry>
+          <Key>de</Key>
+          <Value>Diese Vorlage ist zur Durchführung eines Zugversuchs unter Einsatz des Querhaupts als Wegaufnehmer konzipiert.</Value>
+        </Entry>
+        <Entry>
+          <Key>es</Key>
+          <Value>Esta plantilla está diseñada para realizar ensayos de resistencia a la tracción utilizando un puente como recurso de extensión.</Value>
+        </Entry>
+        <Entry>
+          <Key>fr</Key>
+          <Value>Ce modèle est conçu en vue d'essais de traction utilisant la traverse comme source d'allongement.</Value>
+        </Entry>
+        <Entry>
+          <Key>it</Key>
+          <Value>Questo modello è progettato per le prove di resistenza alla trazione utilizzando la traversa come sorgente di allungamento.</Value>
+        </Entry>
+        <Entry>
+          <Key>ja</Key>
+          <Value>このテンプレートは、クロスヘッドを進展ソースとして使用する引張試験用に作成されています。</Value>
+        </Entry>
+        <Entry>
+          <Key>ko</Key>
+          <Value>이 템플릿은 크로스헤드를 익스텐션 소스로 사용하는 인장 시험을 위해 설계되었습니다.</Value>
+        </Entry>
+        <Entry>
+          <Key>pt</Key>
+          <Value>Este modelo é projetado para teste de tração usando travessa horizontal como fonte de extensão.</Value>
+        </Entry>
+        <Entry>
+          <Key>ru</Key>
+          <Value>Этот шаблон предназначен для проведения испытаний на растяжение компонента с помощью траверсы в качестве источника растяжения.</Value>
+        </Entry>
+        <Entry>
+          <Key>tr</Key>
+          <Value>Uzama kaynakları olarak çaprazkafa kullanan çekme testleri için tasarlanmıştır.</Value>
+        </Entry>
+        <Entry>
+          <Key>zh-hans</Key>
+          <Value>本模板设计用于使用横梁作为延伸来源的拉伸试验。</Value>
+        </Entry>
+        <Entry>
+          <Key>zh-hant</Key>
+          <Value>此範本是針對以橫架作為延伸來源的拉伸試驗而設計。</Value>
+        </Entry>
+        <Entry>
+          <Key>pl</Key>
+          <Value>Szablon utworzony do testów na rozdciąganie przy użyciu poprzeczki jako źródła wydłużenia.</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </Description>
+  <VersionName>
+    <LocalizedString version="4.7">
+      <Selector>VersionName</Selector>
+      <UniqueId>{44f92d16-4cac-4650-b8c2-63b81ff2bd30}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>Tension Test for OGO 2022</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </VersionName>
+  <LastUsedTemplateName>
+    <LocalizedString version="4.7">
+      <Selector>LastUsedTemplateName</Selector>
+      <UniqueId>{3c7a19eb-508c-4550-8cc7-3db2fdfb12f4}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>Tensile test PCL bulk</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </LastUsedTemplateName>
+  <DisplayName>
+    <LocalizedString version="4.7">
+      <Selector>DisplayName</Selector>
+      <UniqueId>{340d081d-a401-4717-9e51-2cc3081fc600}</UniqueId>
+      <InternalLocalizedStrings>
+        <Entry>
+          <Key>en</Key>
+          <Value>Tensile test PCL bulk</Value>
+        </Entry>
+      </InternalLocalizedStrings>
+    </LocalizedString>
+  </DisplayName>
+  <ReportLayouts />
+  <ReportTemplates />
+  <TestRuns />
+  <AnalysisDefinitions />
+  <AnalysisRunSets />
+  <Specimens />
+  <LegacyMapping />
+  <VideoSetDefinitions />
+</Test>

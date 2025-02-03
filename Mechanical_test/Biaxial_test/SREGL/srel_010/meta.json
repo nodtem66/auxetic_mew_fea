@@ -1,0 +1,5 @@
+{
+"name": "sreg_correct_1",
+"thickness_um": [99.86, 97.60, 98.67, 103.56, 109.46],
+"biotester_csv": "srel_010Data.csv",
+}

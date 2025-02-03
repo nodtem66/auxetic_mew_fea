@@ -1,0 +1,5 @@
+{
+"name": "stri_001",
+"thickness_um": [113.57, 137.55, 128.73, 118.34, 115.62],
+"biotester_csv": "stri_001Data.csv",
+}

@@ -1,0 +1,30 @@
+Biaxial test of S_REG_L design
+sregl_001 - 008: A=0.125mm B=A layers=10
+sregl_009 - 012: A=0.25mm B=A layers=10
+Size: 12mm x 12mm
+Note: Design with A=0.125, B=0.75A didn't show the clear structure
+
+Thickness (um)
+----
+sregl_001: 98.71 98.70 100.87 97.62 96.52
+sregl_002: 93.82 90.15 93.28 92.39 102.48 93.29
+sregl_003: 101.91 106.23 105.99 102.53 102.46 106.23 106.88
+sregl_004: 101.14 105.32 104.60 100.30 104.64 100.73 91.76 88.94
+sregl_005: 118.27 128.33 125.10 121.86 127.86
+sregl_006: 132.11 130.49 132.11 129.41 129.95 128.87
+sregl_007: 126.80 124.03 122.97 127.25 127.28
+sregl_008: 124.03 114.44 125.63 125.64 126.24 126.88 105.69 127.26 114.85
+
+sregl_009: 107.92 101.91 106.24 112.16 107.30 182.30
+sregl_010: 99.86 97.60 98.67 103.56 109.46
+sregl_011: 98.21 104.10 101.98 94.10 100.08 96.31
+sregl_012: 64.38 101.78 100.76 100.29 94.04 90.95
+
+Load cell: 2.5N
+Machine: Biotester5000
+Sampling rate: 1Hz
+Image recording: 1Hz
+
+Initial length: 5000um in both direction
+Related files:
+- Keyence/S_REG_L/

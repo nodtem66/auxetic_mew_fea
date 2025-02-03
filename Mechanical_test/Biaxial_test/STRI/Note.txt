@@ -1,0 +1,28 @@
+Biaxial test of S_TRI design (A=0.25mm B=0.75A layers=10)
+Size: 12mm x 12mm
+
+Thickness (um)
+----
+stri_001: 113.57 137.55 128.73 118.34 115.62
+stri_002: 112.95 120.87 121.40 122.42 122.94 166.53
+stri_003: 115.42 126.19 125.10 110.04 108.41 107.93
+
+stri_004: 118.63 124.56 121.32 118.62 119.24 (216.23 223.16 207.12 207.39 218.43)
+stri_005: 117.01 122.96 117.59 121.88 115.95 121.16 118.08 115.96 (205.44 201.35 202.88 207.59 207.59)
+stri_006: 127.26 125.10 125.12 126.17 124.55 131.03 (278.22 262.15 270.72 229.75 239.40)
+stri_007: 114.85 115.40 114.32 115.41 113.35 (235.09 232.39 233.01 231.33 234.55)
+* numbers in brackets are thick layers in some area. See the thickness images in Keyence/S_TRI/ for more detail.
+
+Note
+------
+stri_005: slipery grip (right-hand)
+
+Load cell: 2.5N
+Machine: Biotester5000
+Sampling rate: 1Hz
+Image recording: 1Hz
+Clamp width: 5mm
+
+Initial length: 5000um in both direction
+Related files:
+- Keyence/S_TRI/
